@@ -1,0 +1,19 @@
+page{
+    background-color: #f5f5f5;
+}
+
+@font-face {
+    font-family: 'sleeve';  /* Project id 4258773 */
+    src: url('//at.alicdn.com/t/c/font_4258773_vv1kgu4r3.woff2?t=1695188819066') format('woff2'),
+    url('//at.alicdn.com/t/c/font_4258773_vv1kgu4r3.woff?t=1695188819066') format('woff'),
+    url('//at.alicdn.com/t/c/font_4258773_vv1kgu4r3.ttf?t=1695188819066') format('truetype');
+}
+
+.sleeve{
+    font-family: sleeve !important;
+    color: #157658 !important;
+}
+
+.l-icon-home:before{
+    content: "\e60c";
+}

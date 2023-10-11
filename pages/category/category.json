@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+        "s-sub-cageroies": "/components/sub-category/index"
+    }
+}

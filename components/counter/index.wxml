@@ -1,0 +1,12 @@
+
+<l-counter
+           bind:linout="onOverStep"
+           bind:lintap=""
+           count="{{count}}"
+           min="{{min}}"
+           max="{{max}}"
+           l-count-class="all-background input-size"
+           l-symbol-class="all-background font-color"
+           l-class="container"
+           l-disabled-class="all-background" >
+</l-counter>

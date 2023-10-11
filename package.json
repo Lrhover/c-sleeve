@@ -1,0 +1,14 @@
+{
+  "name": "c-sleeve",
+  "version": "1.0.0",
+  "description": "电商小程序",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "liurenhui",
+  "license": "ISC",
+  "dependencies": {
+    "lin-ui": "^0.9.13"
+  }
+}
