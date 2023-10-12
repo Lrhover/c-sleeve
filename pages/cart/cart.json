@@ -1,3 +1,6 @@
 {
-    "usingComponents": {}
+    "usingComponents": {
+        "s-cart-item": "/components/cart-item/index",
+        "s-empty": "/components/empty/index"
+    }
 }
