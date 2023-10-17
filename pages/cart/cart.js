@@ -1,6 +1,8 @@
 // pages/cart/cart.js
 import {Cart} from "../../models/cart";
 
+const cart = new Cart()
+
 Page({
 
     /**
@@ -8,7 +10,8 @@ Page({
      */
     data: {
         cartItems:[],
-        isEmpty:false
+        isEmpty:false,
+        allChecked:false
     },
 
     /**
@@ -22,7 +25,6 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow() {
-        const cart = new Cart()
         const cartItems = cart.getAllItemFromLocal().items
         if(cart.isEmpty()){
             this.empty()
@@ -32,6 +34,34 @@ Page({
             cartItems:cartItems
         })
         this.notEmpty()
+        this.isAllChecked()
+    },
+
+    refreshCartData(){
+
+    },
+
+    isAllChecked(){
+        const allChecked = cart.isAllChecked()
+        this.setData({
+            allChecked
+        })
+    },
+
+    onCheckAll(event){
+        const checked = event.detail.checked
+        cart.checkAll(checked)
+        this.setData({
+            cartItems:this.data.cartItems
+        })
+    },
+
+    onDeleteItem(event){
+        this.isAllChecked()
+    },
+
+    onSingleCheck(event){
+        this.isAllChecked()
     },
 
     empty(){

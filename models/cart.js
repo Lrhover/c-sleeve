@@ -18,6 +18,40 @@ class Cart {
         return this._getCartData()
     }
 
+    checkItem(skuId){
+        const oldItem = this.findEqualItem(skuId)
+        oldItem.checked = !oldItem.checked
+        this._refreshStorage()
+    }
+
+    isAllChecked(){
+        let allChecked = true
+        const cartItems = this._getCartData().items
+        for(let item of cartItems){
+            if(!item.checked){
+                allChecked = false
+                break
+            }
+        }
+        return allChecked
+    }
+
+    checkAll(checked){
+        const cartData = this._getCartData()
+        cartData.items.forEach(item=>{
+            item.checked = checked
+        })
+        this._refreshStorage()
+    }
+
+    static isSoldOut(item){
+        return item.sku.stock == 0
+    }
+
+    static isOnline(item){
+        return item.sku.online
+    }
+
     isEmpty(){
         const cartData = this._getCartData()
         return cartData.items.length === 0

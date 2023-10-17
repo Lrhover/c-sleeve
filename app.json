@@ -63,9 +63,11 @@
         "l-button": "/miniprogram_npm/lin-ui/button/index",
         "l-tag": "/miniprogram_npm/lin-ui/tag/index",
         "l-loadmore": "/miniprogram_npm/lin-ui/loadmore/index",
+        "l-slide-view": "/miniprogram_npm/lin-ui/slide-view/index",
         "l-loading": "/miniprogram_npm/lin-ui/loading/index",
         "s-spu-preview": "/components/spu-preview/index",
         "s-spu-preview-r": "/components/spu-preview-r/index",
-        "s-counter": "/components/counter/index"
+        "s-counter": "/components/counter/index",
+        "s-checkbox": "/components/checkbox/index"
     }
 }
